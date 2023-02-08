@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { OutNavbarContainer } from '../components/OutNavbarContainer'
 // import { Link } from "react-router-dom";
-// import { AuthContext } from "../auth/authContext/AuthContext";
+import { AuthContext } from "../auth/AuthContext";
 
 export const ProfilePage = () => {
-  // const { login, authState } = useContext(AuthContext);
-  // const { isLogged, user } = authState;
-
+  const { login, authState } = useContext(AuthContext);
+  const { isLogged, user } = authState;
+console.log(user);
   return (
     <>
       <OutNavbarContainer />
