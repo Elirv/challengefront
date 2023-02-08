@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {ButtonLogout} from './ButtonLogout'
+
 export const OutNavbarContainer = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -13,8 +14,8 @@ export const OutNavbarContainer = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/gifs">Gifs</Nav.Link>
-                        <Nav.Link href="/clips">Clips</Nav.Link>
+                        <Nav.Link href="/gif">Gifs</Nav.Link>
+                        <Nav.Link href="/clip">Clips</Nav.Link>
                         <Nav.Link href="/profile">Profile</Nav.Link>
                     </Nav>
 

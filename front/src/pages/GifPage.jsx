@@ -7,7 +7,7 @@ export const GifPage = () => {
   
 
   const [memeData, setMemeData] = useState([]);
-
+console.log(memeData);
   useEffect(() => {
     getAllMemes();
   }, []);
@@ -23,7 +23,6 @@ export const GifPage = () => {
 
   return (
     <>
-    <h1>hola¿?</h1>
       <NavbarContainer />
           <div>
             {memeData?.map((meme) => {
