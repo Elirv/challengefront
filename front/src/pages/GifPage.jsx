@@ -4,6 +4,7 @@ import { toast } from "react-hot-toast";
 import { getMemes } from "../assets/api/apis";
 
 export const GifPage = () => {
+  
 
   const [memeData, setMemeData] = useState([]);
 
@@ -22,6 +23,7 @@ export const GifPage = () => {
 
   return (
     <>
+    <h1>hola¿?</h1>
       <NavbarContainer />
           <div>
             {memeData?.map((meme) => {

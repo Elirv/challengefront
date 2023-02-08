@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import {OutNavbarContainer} from '../components/OutNavbar'
+import {OutNavbarContainer} from '../components/OutNavbarContainer'
 // import { Link } from "react-router-dom";
 // import { AuthContext } from "../auth/authContext/AuthContext";
 
@@ -9,45 +9,42 @@ export const ProfilePage = () => {
 
   return (
     <>
+    <p>holaaaaaaa</p>
     <OutNavbarContainer/>
-      <main className="main">
-        <div>
-        <p>profile</p>
-          <div>
-            {/* <div className="image">
-              <img
+    <main className="main">
+            <div className="image">
+              {/* <img
                 src={
                   user.picture
                     ? user.picture
                     : "https://github.com/OlgaKoplik/CodePen/blob/master/profile.jpg?raw=true"
                 }
-              />
-              <button className="bt-ed">
+              /> */}
+              {/* <button className="bt-ed">
                 <Link to="/editProfile">
-                  <p>Edit Profile</p>
+                  <Texto>Edit Profile</Texto>
                 </Link>
-              </button>
-            </div> */}
-          </div>
-          <div>
+              </button> */}
+            </div>
+
+          <form>
             <div>
               <label className="line">Username:</label>
-              <input> {user?.userName}</input>
+              <TextArea> {user?.userName}</TextArea>
             </div>
             <div>
               <label className="line">Name:</label>
-              <input> {user?.firstName}</input>
+              <TextArea> {user?.firstName}</TextArea>
             </div>
             <div>
               <label className="line">First Name:</label>
-              <input> {user?.lastName}</input>
+              <TextArea> {user?.lastName}</TextArea>
             </div>
             <div>
               <label className="line">Email:</label>
-              <input> {user?.email}</input>
+              <TextArea> {user?.email}</TextArea>
             </div>
-          </div>
-        </div>
+          </form>
       </main>
     </>
   );
