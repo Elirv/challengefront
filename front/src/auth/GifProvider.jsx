@@ -7,17 +7,17 @@ export const GifProvider = ({ children }) => {
   const [query, setQuery] = useState("");
   const [meme, setMeme] = useState([]);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const memes = async () => {
-      const response = await searchMemes(query)
-      setList(response)
-      console.log("providerresponse", response)
-      console.log("query", query)
-    }
+  //   const memes = async () => {
+  //     const response = await searchMemes(query)
+  //     setList(response)
+  //     console.log("providerresponse", response)
+  //     console.log("query", query)
+  //   }
 
-    if (query.length > 3) memes();
-  }, [query]);
+  //   if (query.length > 3) memes();
+  // }, [query]);
 
   return (
 

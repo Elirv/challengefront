@@ -4,9 +4,9 @@ import { OutNavbarContainer } from '../components/OutNavbarContainer'
 import { GifContext } from "../auth/GifContext";
 
 export const ProfilePage = () => {
-  const { login, authState } = useContext(GifContext);
-  // const { isLogged, user } = authState;
-// console.log(user);
+  const { meme, setMeme } = useContext(GifContext);
+  
+console.log(meme);
   return (
     <>
       <OutNavbarContainer />
@@ -29,19 +29,19 @@ export const ProfilePage = () => {
         <form>
           <div>
             <label className="line">Username:</label>
-            <input input type="text"/>
+            <input input type="text" placeholder="UserName"/>
           </div>
           <div>
             <label className="line">Name:</label>
-            <input input type="text"/>
+            <input input type="text" placeholder="Name"/>
           </div>
           <div>
             <label className="line">First Name:</label>
-            <input input type="text"/>
+            <input input type="text" placeholder="FirstName"/>
           </div>
           <div>
             <label className="line">Email:</label>
-            <input input type="email"/> {/* {user?.email} */}
+            <input input type="email" placeholder="Email"/> {/* {user?.email} */}
           </div>
         </form>
       </main>

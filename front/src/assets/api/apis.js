@@ -3,12 +3,13 @@ import { toast } from "react-hot-toast";
 
 export const getMemes = async (id) => {
   try {
-    const url = `http://localhost:5000/memes/${id}`;
+    const url = "http://localhost:5000/memes";
 
     const resp = await fetch(url);
     const apiData = await resp.json();
-    console.log(apiData.data);
+    console.log(apiData);
     return apiData.data;
+
   } catch (error) {
     console.log("Something is wrong with the api");
   }
