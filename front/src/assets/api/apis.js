@@ -7,11 +7,14 @@ export const getMemes = async (id) => {
 
     const resp = await fetch(url);
     const apiData = await resp.json();
-    return apiData;
+    console.log(apiData.data);
+    return apiData.data;
   } catch (error) {
-    console.log("Algo fallo en la api");
+    console.log("Something is wrong with the api");
   }
 };
+
+
 
 export const postUsers = async (userData) => {
   try {

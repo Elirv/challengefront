@@ -2,14 +2,14 @@ import { Routes, Route } from "react-router-dom"
 import { ClipsPage } from "../pages/ClipsPage"
 import { GifPage } from "../pages/GifPage"
 import { ProfilePage } from "../pages/ProfilePage"
-import { AuthProvider } from "../auth/AuthProvider"
+import { GifProvider } from "../auth/GifProvider"
 // import Login from "../pages/login"
 
 export const Router = () => {
 
     return (
 
-        <AuthProvider>
+        <GifProvider>
             <Routes>
                 {/* <Route path='/' element={<Login />}> */}
                 <Route path='/' element={<GifPage />} />
@@ -18,7 +18,7 @@ export const Router = () => {
                 <Route path='/profile' element={<ProfilePage />} />
                 {/* </Route> */}
             </Routes>
-        </AuthProvider>
+        </GifProvider>
 
     )
 }
