@@ -4,6 +4,7 @@ import { OutNavbarContainer } from '../components/OutNavbarContainer'
 import { GifContext } from "../auth/GifContext";
 
 export const ProfilePage = () => {
+  
   const { meme, setMeme } = useContext(GifContext);
   
 console.log(meme);

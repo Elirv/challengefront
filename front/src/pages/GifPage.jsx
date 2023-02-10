@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { NavbarContainer } from '../components/InNavbar';
 import { toast } from "react-hot-toast";
 import { getMemes } from "../assets/api/apis";
+import { GifContext } from '../auth/GifContext';
 
 export const GifPage = () => {
-  
+  const { meme, setMeme } = useContext(GifContext);
 
   const [memeData, setMemeData] = useState([]);
-console.log(memeData);
+
+  console.log(meme)
+
   useEffect(() => {
     getAllMemes();
   }, []);
@@ -19,20 +22,20 @@ console.log(memeData);
     } catch (error) {
       toast.error("Something went wrong!");
     }
-  };
+  };  //0z1KsHPYH5H3QRR917Fnp65Ys2afUUmG
 
   return (
     <>
       <NavbarContainer />
-          <div>
-            {memeData?.map((meme) => {
-              return (
-                <div key={meme.id}>
-                  <img src={meme.meme} alt={ups} />
-                </div>
-              );
-            })}
-          </div>
+      <div>
+        {memeData?.map((meme) => {
+          return (
+            <div key={meme.id}>
+              <img src={meme.meme} alt={ups} />
+            </div>
+          );
+        })}
+      </div>
     </>
   )
 }
